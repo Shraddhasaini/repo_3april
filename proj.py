@@ -1,2 +1,2 @@
-while true:
-print("Shraddha")
+while True:
+ print("Shraddha")
