@@ -1,0 +1,118 @@
+
+mkapoor@mkapoor-ltp MINGW64 ~ (master)
+$ cd D:
+
+mkapoor@mkapoor-ltp MINGW64 /d
+$ cd gitprojects/\
+>
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects
+$ ls -ah
+./   2ndapril/   2ndaprilcloned/  democloned/  proj1/    repo_3april/
+../  2nd-april/  demo/            lab/         project/
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects
+$ cd repo_3april/
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ ls -ah
+./  ../  .git/  instructions.txt  proj.py
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ git branch
+  master
+* test1.1
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ git fetch "https://github.com/Shraddhasaini/repo_3april/tree/test2.1"
+remote: Not Found
+fatal: repository 'https://github.com/Shraddhasaini/repo_3april/tree/test2.1/' not found
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ git fetch "https://github.com/Shraddhasaini/repo_3april"
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 5 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (5/5), done.
+From https://github.com/Shraddhasaini/repo_3april
+ * branch            HEAD       -> FETCH_HEAD
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ git branch
+  master
+* test1.1
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ ls -ah
+./  ../  .git/  instructions.txt  proj.py
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ cat proj.py
+while True:
+ print("Shraddha on master branch")
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ cat instructions.txt
+do not send me hoax calls!!!
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ git fetch origin
+remote: Counting objects: 14, done.
+remote: Compressing objects: 100% (10/10), done.
+remote: Total 14 (delta 0), reused 12 (delta 0), pack-reused 0
+Unpacking objects: 100% (14/14), done.
+From https://github.com/Shraddhasaini/repo_3april
+   da6bd31..cb89860  master     -> origin/master
+ * [new branch]      test2.1    -> origin/test2.1
+ * [new branch]      test2.2    -> origin/test2.2
+ * [new branch]      test4.4    -> origin/test4.4
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ git branch
+  master
+* test1.1
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ ls -ah
+./  ../  .git/  instructions.txt  proj.py
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ cat proj.py
+while True:
+ print("Shraddha on master branch")
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ git log --oneline
+5d54a8e (HEAD -> test1.1, origin/test1.1) commiting from remote:committed by :MonitK,check instructions
+da6bd31 (master) [102]change value in line 2
+1ad40b8 [102]added space in line 2
+855d757 [101]inifinte loop
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ git merge origin/test2.1
+Merge made by the 'recursive' strategy.
+ proj.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ cat proj.py
+while True:
+ print("Shraddha on test2.1 branch") #add your branch name instead of master
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ git push
+fatal: HttpRequestException encountered.
+   An error occurred while sending the request.
+Username for 'https://github.com': MonitK
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 348 bytes | 348.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/Shraddhasaini/repo_3april
+   5d54a8e..c410463  test1.1 -> test1.1
+
+mkapoor@mkapoor-ltp MINGW64 /d/gitprojects/repo_3april (test1.1)
+$ cat proj.py
+while True:
+ print("Shraddha on test2.1 branch") #add your branch name instead of master
